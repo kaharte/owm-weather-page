@@ -39,4 +39,9 @@ public class WeatherAppApplicationTests {
 		Assert.assertTrue(weatherModel.currentChicagoTemp() < 120);
 	}
 
+	@Test
+	public void fetchesSomethingForChicagoRainData() {
+		Assert.assertTrue(false);
+	}
+
 }
