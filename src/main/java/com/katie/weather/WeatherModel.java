@@ -42,7 +42,7 @@ public class WeatherModel {
         Double tempInKelvin = chicagoMainData.getTemp();
         Double tempInFahrenheit = (tempInKelvin - 273.15) * 9/5 + 32.0;
         System.out.println(tempInFahrenheit);
-        return new DecimalFormat("#.##").format(tempInFahrenheit);
+        return new DecimalFormat("#.##").format(tempInFahrenheit) + " °F";
     }
 
     @Bean
