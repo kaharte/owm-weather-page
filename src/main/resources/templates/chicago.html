@@ -6,17 +6,21 @@
 </head>
 <body>
 <div class="container">
-    <h2>Chicago Weather</h2>
-    <div>
-        <form class="form-horizontal" th:object="${weatherModel}" th:action="@{/weather/Chicago}" method="post">
-            <div class="form-group">
-                <div class="col-sm-10">
-<!--                    <input type="hidden" class="form-control" th:field="*{chicagoWeather}"/>-->
-                    <input type="text" class="form-control" th:field="${cityID}"/>
-                </div>
-            </div>
-        </form>
-    </div>
+<!--    <div th:if="${not #lists.isEmpty(products)}">-->
+        <h2>Chicago Weather</h2>
+        <table class="table table-striped">
+            <tr>
+                <th>CityID</th>
+                <th>Temperature</th>
+
+            </tr>
+            <tr>
+                <td th:text="${cityID}">CityID</td>
+                <td th:text="${temperature}">Temperature</td>
+
+            </tr>
+        </table>
+<!--    </div>-->
 </div>
 </body>
 </html>
