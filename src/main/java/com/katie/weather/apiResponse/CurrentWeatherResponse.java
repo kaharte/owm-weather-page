@@ -2,9 +2,10 @@ package com.katie.weather.apiResponse;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class CurrentWeatherResponse {
     private Coord coord;
-    private Weather weather;
+//    private Weather weather;
     private String base;
     private Main main;
     private String visibility;
@@ -24,13 +25,13 @@ public class CurrentWeatherResponse {
         this.coord = coord;
     }
 
-    public Weather getWeather() {
-        return weather;
-    }
-
-    public void setWeather(Weather weather) {
-        this.weather = weather;
-    }
+//    public Weather getWeather() {
+//        return weather;
+//    }
+//
+//    public void setWeather(Weather weather) {
+//        this.weather = weather;
+//    }
 
     public String getBase() {
         return base;
@@ -116,7 +117,7 @@ public class CurrentWeatherResponse {
     public String toString() {
         return "CurrentWeatherResponse{" +
                 "coord=" + coord +
-                ", weather=" + weather +
+//                ", weather=" + weather +
                 ", base='" + base + '\'' +
                 ", main=" + main +
                 ", visibility='" + visibility + '\'' +
