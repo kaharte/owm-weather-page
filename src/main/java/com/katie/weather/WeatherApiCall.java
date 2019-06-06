@@ -12,21 +12,20 @@ public class WeatherApiCall {
 
     private static final Logger LOG = LoggerFactory.getLogger(WeatherTestRun.class);
 
-    public String getData() throws MalformedURLException {
+    public CurrentWeatherResponse getData() throws MalformedURLException {
         RestTemplate restTemplate = new RestTemplate();
         StringBuilder sb = new StringBuilder();
-        WeatherModel model = new WeatherModel();
 
         sb.append("http://api.openweathermap.org/data/2.5/weather?id=");
-        sb.append(model.cityID);
+        sb.append(ApiStaticInfo.cityID);
         sb.append("&appid=");
-        sb.append(model.owmApiKey);
+        sb.append(ApiStaticInfo.owmApiKey);
 
         CurrentWeatherResponse response = restTemplate.getForObject(sb.toString(), CurrentWeatherResponse.class);
         LOG.info(response.toString());
-        System.out.println(response.getMain().getTemp());
-        System.out.println(response.getWeather());
-        System.out.println(response.getWeather().getMain());
-        return "Not working yet";
+//        System.out.println(response.getMain().getTemp());
+//        System.out.println(response.getWeather());
+//        System.out.println(response.getWeather().getMain());
+        return response;
     }
 }

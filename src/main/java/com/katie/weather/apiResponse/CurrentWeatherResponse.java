@@ -1,13 +1,10 @@
 package com.katie.weather.apiResponse;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.fasterxml.jackson.databind.ObjectMapper;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class CurrentWeatherResponse {
-
-    private ObjectMapper mapper = new ObjectMapper();
-
+    
     private Coord coord;
     private WeatherArray[] weather;
     private String base;
