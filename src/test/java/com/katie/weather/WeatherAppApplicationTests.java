@@ -29,16 +29,16 @@ public class WeatherAppApplicationTests {
 	}
 
 	@Test
-	public void currentChicagoTempIsAStringValue() {
-		Assert.assertTrue(weatherModel.currentChicagoTemp().getClass().getName() == "java.lang.String");
+	public void currentChicagoTempIsAReasonableNumber() {
+//		Double temperatureDouble = Double.parseDouble(weatherModel.currentChicagoTemp());
+		Double temperatureDouble = weatherModel.currentChicagoTemp();
+		Assert.assertTrue(temperatureDouble > -20);
+		Assert.assertTrue(temperatureDouble < 120);
 	}
 
 	@Test
-	public void currentChicagoTempIsAReasonableNumber() {
-//		TODO broke this test when I added °F
-//		Double temperatureDouble = Double.parseDouble(weatherModel.currentChicagoTemp());
-//		Assert.assertTrue(temperatureDouble > -20);
-//		Assert.assertTrue(temperatureDouble < 120);
+	public void tempIsFormattedCorrectly() {
+
 	}
 
 	@Test
@@ -46,4 +46,4 @@ public class WeatherAppApplicationTests {
 		Assert.assertTrue(false);
 	}
 
-}
+	}

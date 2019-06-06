@@ -17,7 +17,7 @@ public class WeatherController {
     @RequestMapping(path = "/weather/Chicago")
     public String showChicagoWeather(Model model) {
         model.addAttribute("cityID", weatherModel.getCityID());
-        model.addAttribute("temperature", weatherModel.currentChicagoTemp());
+        model.addAttribute("temperature", weatherModel.formattedTemp());
         return "chicago";
     }
 
