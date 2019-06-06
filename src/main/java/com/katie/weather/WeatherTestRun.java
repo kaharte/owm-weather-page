@@ -5,6 +5,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.client.RestTemplate;
 
+import java.net.MalformedURLException;
+
 public class WeatherTestRun {
 
     private static final Logger LOG = LoggerFactory.getLogger(WeatherTestRun.class);
@@ -16,6 +18,15 @@ public class WeatherTestRun {
         LOG.info(response.toString());
         System.out.println(response.getMain().getTemp());
         System.out.println(response.getWeather());
-        System.out.println();
+        System.out.println(response.getWeather().getMain());
+
+        WeatherApiCall weatherApiCall = new WeatherApiCall();
+        
+        try {
+            weatherApiCall.getData();
+        } catch (MalformedURLException e) {
+            LOG.error("bad URL", e);
+            e.printStackTrace();
+        }
     }
 }
