@@ -29,8 +29,8 @@ public class CurrentWeatherResponse {
         this.coord = coord;
     }
 
-    public WeatherArray[] getWeather() {
-        return weather;
+    public WeatherArray getWeather() {
+        return weather[0];
     }
 
     public void setWeather(WeatherArray[] weather) {
