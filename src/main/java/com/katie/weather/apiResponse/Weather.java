@@ -5,5 +5,5 @@ import org.springframework.stereotype.Controller;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Weather {
-    //WeatherArray[] weather;
+//    WeatherArray[] weatherArrays;
 }

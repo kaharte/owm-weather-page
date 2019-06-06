@@ -17,12 +17,12 @@ public class WeatherModel {
     public String cityString = "Chicago";
     public OWM owm = new OWM(owmApiKey);
     public CurrentWeather chicagoWeather;
-    public HourlyWeatherForecast chicagoHourlyForecast;
+//    public HourlyWeatherForecast chicagoHourlyForecast;
 
     {
         try {
             chicagoWeather = owm.currentWeatherByCityId(cityID);
-            chicagoHourlyForecast = owm.hourlyWeatherForecastByCityId(cityID);
+//            chicagoHourlyForecast = owm.hourlyWeatherForecastByCityId(cityID);
         } catch (APIException e) {
             e.printStackTrace();
         }
@@ -36,7 +36,7 @@ public class WeatherModel {
     public Double currentChicagoTemp() {
 
         Main chicagoMainData = chicagoWeather.getMainData();
-        System.out.println(chicagoWeather.getMainData());;
+        System.out.println(chicagoWeather.getMainData());
         Double tempInKelvin = chicagoMainData.getTemp();
         Double tempInFahrenheit = (tempInKelvin - 273.15) * 9/5 + 32.0;
         return tempInFahrenheit;
