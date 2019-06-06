@@ -14,13 +14,9 @@ import java.text.DecimalFormat;
 
 @Component
 public class WeatherModel {
-//    public String owmApiKey = "0bbd0d0a5ab1ff072291b6d5e80c657f";
-//    public int cityID = 4887398; //this is Chicago ID, figure out how to get number from JSON file
-//    public String cityString = "Chicago";
-//    public OWM owm = new OWM(owmApiKey);
-    public CurrentWeatherResponse chicagoWeather;
-//    public HourlyWeatherForecast chicagoHourlyForecast;
 
+    public CurrentWeatherResponse chicagoWeather;
+    
     {
         WeatherApiCall weatherApiCall = new WeatherApiCall();
 
@@ -50,7 +46,4 @@ public class WeatherModel {
         return new DecimalFormat("#.#").format(currentChicagoTemp()) + " °F";
     }
 
-//    public int getCityID() {
-//        return cityID;
-//    }
 }

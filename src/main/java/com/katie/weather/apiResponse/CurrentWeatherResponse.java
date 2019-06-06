@@ -4,7 +4,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class CurrentWeatherResponse {
-    
+
     private Coord coord;
     private WeatherArray[] weather;
     private String base;
