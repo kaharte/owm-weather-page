@@ -1,11 +1,6 @@
 package com.katie.weather;
 
 import com.katie.weather.apiResponse.CurrentWeatherResponse;
-import net.aksingh.owmjapis.api.APIException;
-import net.aksingh.owmjapis.core.OWM;
-import net.aksingh.owmjapis.model.CurrentWeather;
-import net.aksingh.owmjapis.model.HourlyWeatherForecast;
-import net.aksingh.owmjapis.model.param.Main;
 import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Component;
 
@@ -16,7 +11,7 @@ import java.text.DecimalFormat;
 public class WeatherModel {
 
     public CurrentWeatherResponse chicagoWeather;
-    
+
     {
         WeatherApiCall weatherApiCall = new WeatherApiCall();
 
