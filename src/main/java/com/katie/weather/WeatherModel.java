@@ -41,4 +41,8 @@ public class WeatherModel {
         return new DecimalFormat("#.#").format(currentChicagoTemp()) + " °F";
     }
 
+    public String currentWeatherType() {
+        return chicagoWeather.getWeather().getMain();
+    }
+
 }

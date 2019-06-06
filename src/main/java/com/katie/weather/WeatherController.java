@@ -18,6 +18,7 @@ public class WeatherController {
     public String showChicagoWeather(Model model) {
         model.addAttribute("cityID", ApiStaticInfo.cityID);
         model.addAttribute("temperature", weatherModel.formattedTemp());
+        model.addAttribute("weather", weatherModel.currentWeatherType());
         return "chicago";
     }
 
