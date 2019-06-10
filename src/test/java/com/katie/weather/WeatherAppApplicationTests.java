@@ -45,7 +45,7 @@ public class WeatherAppApplicationTests {
 
 	@Before
 	public void setUp() {
-		when(mainMock.getTemp()).thenReturn(70.0);
+		when(mainMock.getTemp()).thenReturn(293.0); //note: this is in Kelvin
 		when(currentWeatherResponseMock.getMain()).thenReturn(mainMock);
 		when(currentWeatherResponseMock.getBase()).thenReturn("BASE");
 	}
@@ -58,7 +58,7 @@ public class WeatherAppApplicationTests {
 	public void simpleMockObjectTest() {
 		Assert.assertTrue(currentWeatherResponseMock.getBase() == "BASE");
 
-		Assert.assertTrue(currentWeatherResponseMock.getMain().getTemp() == 70.0);
+		Assert.assertTrue(currentWeatherResponseMock.getMain().getTemp() == 293.0);
 	}
 
 	@Test

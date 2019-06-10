@@ -31,7 +31,7 @@ public class WeatherModel {
     }
 
     public Double currentChicagoTemp() {
-
+        //TODO This violates the Law of Demeter
         Double tempInKelvin = chicagoWeather.getMain().getTemp();
         Double tempInFahrenheit = (tempInKelvin - 273.15) * 9/5 + 32.0;
         return tempInFahrenheit;

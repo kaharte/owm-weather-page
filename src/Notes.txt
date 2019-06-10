@@ -1,0 +1,12 @@
+The following is what I think needs to be improved in my code:
+
+It seems there are poorly thought out dependencies throughout the app, this became especially apparent when trying to
+create mocks for unit tests.
+
+Law of Demeter is violated
+
+Class names all start with 'Weather'--clean code specifically tells you not to do this. Should refactor.
+
+Names are ambiguous--I need to track down declarations to determine, for example, if chicagoWeather is a full API
+response for the weather in chicago or if it is the "weather" subset of data (rainy, sunny etc).
+
