@@ -70,7 +70,6 @@ public class WeatherAppApplicationTests {
 	public void currentChicagoTempIsAReasonableNumber() {
 		Double temperatureDouble = currentWeatherResponseMock.getMain().getTemp();
 
-
 		Assert.assertTrue(temperatureDouble > -20);
 		Assert.assertTrue(temperatureDouble < 120);
 	}

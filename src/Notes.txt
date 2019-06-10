@@ -10,3 +10,7 @@ Class names all start with 'Weather'--clean code specifically tells you not to d
 Names are ambiguous--I need to track down declarations to determine, for example, if chicagoWeather is a full API
 response for the weather in chicago or if it is the "weather" subset of data (rainy, sunny etc).
 
+Poor code coverage--71% classes, 66% lines, 53% methods
+I also don't fully understand why some lines are considered 'covered' and some aren't--in Main class for example
+the getTemp() method is not marked as covered but it is used in the tests. Maybe because it is just set with a mock?
+In apiResponse classes, all the setters are marked as being covered but the getters are not.
