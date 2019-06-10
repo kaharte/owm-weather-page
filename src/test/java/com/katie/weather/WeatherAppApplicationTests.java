@@ -77,7 +77,9 @@ public class WeatherAppApplicationTests {
 
 	@Test
 	public void tempIsFormattedCorrectly() {
-		Assert.assertTrue(Pattern.matches("[0-9].*°F$", weatherModel.formattedTemp()));
+//		Assert.assertTrue(Pattern.matches("[0-9].*°F$", weatherModel.formattedTemp()));
+		System.out.println(weatherModel.formattedTemp());
+		Assert.assertTrue(Pattern.matches("[-0-9].*°F$", weatherModel.formattedTemp()));
 	}
 
 
