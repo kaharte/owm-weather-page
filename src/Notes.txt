@@ -14,3 +14,8 @@ Poor code coverage--71% classes, 66% lines, 53% methods
 I also don't fully understand why some lines are considered 'covered' and some aren't--in Main class for example
 the getTemp() method is not marked as covered but it is used in the tests. Maybe because it is just set with a mock?
 In apiResponse classes, all the setters are marked as being covered but the getters are not.
+
+I made a UML diagram for the weather app and have put it in the src folder. I am not 100% sure that I've diagrammed
+things correctly, but just from trying to follow the diagram I made it does not seem like the classes have been
+composed in a very logical way. Particularly the relationships between the WeatherApiCall, CurrentWeatherResponse, and
+WeatherModel. It would be nice if I could refactor those, I'm not totally sure what I would do to improve things though.

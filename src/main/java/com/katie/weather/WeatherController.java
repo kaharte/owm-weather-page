@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 @RequestMapping(path = "/")
 public class WeatherController {
-    WeatherModel weatherModel = new WeatherModel();
+    private WeatherModel weatherModel = new WeatherModel();
 
     @RequestMapping(path = "/katherine.harte@grainger.com")
     public String getKatiesInfo() {
