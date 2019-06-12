@@ -1,8 +1,8 @@
 package com.katie.weather.apiResponse;
 
 public class Coord {
-    Double lon;
-    Double lat;
+    private Double lon;
+    private Double lat;
 
     public Double getLon() {
         return lon;

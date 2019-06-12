@@ -1,10 +1,10 @@
 package com.katie.weather.apiResponse;
 
 public class WeatherArray {
-    Long id;
-    String main;
-    String description;
-    String icon;
+    private Long id;
+    private String main;
+    private String description;
+    private String icon;
 
     public Long getId() {
         return id;

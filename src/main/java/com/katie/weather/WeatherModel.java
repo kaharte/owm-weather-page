@@ -31,7 +31,10 @@ public class WeatherModel {
     }
 
     public Double currentChicagoTemp() {
-        //TODO This violates the Law of Demeter
+        /*
+        TODO This violates the Law of Demeter.
+        Does this fall under the exception for data structures with no behavior though?
+        */
         Double tempInKelvin = chicagoWeather.getMain().getTemp();
         Double tempInFahrenheit = (tempInKelvin - 273.15) * 9/5 + 32.0;
         return tempInFahrenheit;
