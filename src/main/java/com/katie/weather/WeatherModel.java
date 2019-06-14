@@ -10,7 +10,7 @@ import java.text.DecimalFormat;
 @Component
 public class WeatherModel {
 
-    public CurrentWeatherResponse chicagoWeather;
+    private CurrentWeatherResponse chicagoWeather;
 
     {
         WeatherApiCall weatherApiCall = new WeatherApiCall();
