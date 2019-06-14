@@ -19,3 +19,24 @@ I made a UML diagram for the weather app and have put it in the src folder. I am
 things correctly, but just from trying to follow the diagram I made it does not seem like the classes have been
 composed in a very logical way. Particularly the relationships between the WeatherApiCall, CurrentWeatherResponse, and
 WeatherModel. It would be nice if I could refactor those, I'm not totally sure what I would do to improve things though.
+
+Trying to name/structure these classes better by describing what they actually do:
+
+CurrentWeatherResponse--a DTO that initially has none of its instance variables set. This class and the classes it is
+composed of will store all weather data. The data is set with the Spring REST template.
+
+WeatherApiCall--sets data in CurrentWeatherResponse by calling the Open Weather Map API and invoking the Spring
+RestTemplate. RestTemplate uses Jackson to deserialize JSON data and set values in CurrentWeatherResponse and the
+classes it is composed of.
+
+WeatherModel--Created and operates on an instance of CurrentWeatherResponse--applies business logic to raw data to
+generate the temp in Fahrenheit and the formatted temp string. Is this doing too many things?
+When WeatherModel object is instantiated, static initialization block creates a WeatherApiCall instance which sets the
+CurrentWeatherResponse instance variable to the data set from the API call. This variable is then used to get the
+formatted data.
+^I feel like this class is the one that makes the least sense. I would like to see if I can refactor this.
+
+ApiStaticInfo--holds data (API key, city ID) that is used by WeatherApiCall and WeatherController
+
+WeatherController--controller (Spring annotation) that maps HTML files to URLs. Attributes from WeatherModel and
+ApiStaticInfo are added to a Model object, and Thymeleaf inserts these model attributes into the HTML code.
