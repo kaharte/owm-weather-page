@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 @RequestMapping(path = "/")
 public class WeatherController {
-    private WeatherModel weatherModel = new WeatherModel();
+    private WeatherModel weatherModel;
 
     @RequestMapping(path = "/katherine.harte@grainger.com", method = RequestMethod.GET)
     public String getKatiesInfo() {
@@ -17,6 +17,7 @@ public class WeatherController {
 
     @RequestMapping(path = "/weather/Chicago", method = RequestMethod.GET)
     public String showChicagoWeather(Model model) {
+        weatherModel = new WeatherModel();
         model.addAttribute("cityID", ApiStaticInfo.cityID);
         model.addAttribute("temperature", weatherModel.formattedTemp());
         model.addAttribute("weather", weatherModel.currentWeatherType());

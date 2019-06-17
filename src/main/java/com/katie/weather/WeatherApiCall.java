@@ -10,7 +10,7 @@ import java.net.MalformedURLException;
 
 public class WeatherApiCall {
 
-    private static final Logger LOG = LoggerFactory.getLogger(WeatherAppApplication.class);
+    private static final Logger LOG = LoggerFactory.getLogger(WeatherApiCall.class);
 
     public CurrentWeatherResponse getData() throws MalformedURLException {
         RestTemplate restTemplate = new RestTemplate();
