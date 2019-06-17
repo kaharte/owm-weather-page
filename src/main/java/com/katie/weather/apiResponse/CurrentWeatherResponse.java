@@ -2,6 +2,8 @@ package com.katie.weather.apiResponse;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
+import java.util.Arrays;
+
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class CurrentWeatherResponse {
 
@@ -118,7 +120,7 @@ public class CurrentWeatherResponse {
     public String toString() {
         return "CurrentWeatherResponse{" +
                 "coord=" + coord +
-                ", weather=" + weather +
+                ", weather=" + Arrays.toString(weather) +
                 ", base='" + base + '\'' +
                 ", main=" + main +
                 ", visibility='" + visibility + '\'' +

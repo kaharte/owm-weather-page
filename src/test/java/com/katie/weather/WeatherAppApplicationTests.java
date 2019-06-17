@@ -9,14 +9,12 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
-import org.mockito.MockitoAnnotations;
 import org.mockito.junit.MockitoJUnit;
 import org.mockito.junit.MockitoJUnitRunner;
 import org.mockito.junit.MockitoRule;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.junit4.SpringRunner;
 
-import java.util.regex.Matcher;
+import java.util.Objects;
 import java.util.regex.Pattern;
 
 import static org.mockito.Mockito.*;
@@ -56,9 +54,9 @@ public class WeatherAppApplicationTests {
 
 	@Test
 	public void simpleMockObjectTest() {
-		Assert.assertTrue(currentWeatherResponseMock.getBase() == "BASE");
+		Assert.assertTrue(Objects.equals(currentWeatherResponseMock.getBase(), "BASE"));
 
-		Assert.assertTrue(currentWeatherResponseMock.getMain().getTemp() == 293.0);
+		Assert.assertEquals(293.0, currentWeatherResponseMock.getMain().getTemp(), 0.0);
 	}
 
 	@Test

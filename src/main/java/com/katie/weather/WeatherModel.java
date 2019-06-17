@@ -1,7 +1,6 @@
 package com.katie.weather;
 
 import com.katie.weather.apiResponse.CurrentWeatherResponse;
-import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Component;
 
 import java.net.MalformedURLException;
